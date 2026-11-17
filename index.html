@@ -148,6 +148,10 @@ footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px}
  .tbl-wrap{max-height:none}
 }
 @media print{:root{--bg:#fff;--bg2:#fff;--card:#fff;--card2:#fff;--border:#ccc;--txt:#000;--muted:#444}body::before,.filters,.hactions .btn,.badge-live{display:none}#exLine b{color:#000}.tbl-wrap{max-height:none}.exec,.chart-card{break-inside:avoid}}
+.pill-high{background:rgba(249,115,22,.15);color:#fdba74;border:1px solid rgba(249,115,22,.45);animation:pillBlink 1.2s infinite}
+.tail-high{color:#fb923c;font-weight:800}.kpi.k-orange::after{background:#f97316}
+.wl.hi{background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.35)}.wl.hi b{color:#fdba74}
+@media(min-width:721px){.kpis{grid-template-columns:repeat(auto-fit,minmax(165px,1fr))}}
 </style>
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 </head>
@@ -180,15 +184,16 @@ footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px}
       <div class="ex-ring"><svg viewBox="0 0 120 120"><circle class="rb" cx="60" cy="60" r="52"/><circle class="rf" id="rgArc" cx="60" cy="60" r="52" transform="rotate(-90 60 60)" stroke="#22c55e" stroke-dasharray="0 327"/></svg><div class="rv"><b id="rgPct">—</b><small>COMPLIANT</small></div></div>
       <div><div class="ex-tag">EXECUTIVE SUMMARY · WHOLE REGION</div><p id="exLine">Loading…</p><div class="ex-chips" id="exChips"></div></div>
     </div>
-    <div class="ex-card"><h4>🚨 Critical Watchlist <span>lowest tail-end pressure</span></h4><div id="exWatch"></div></div>
+    <div class="ex-card"><h4>🚨 Critical Watchlist <span>furthest outside 6–30″</span></h4><div id="exWatch"></div></div>
     <div class="ex-card"><h4>🏆 Team Lead Scorecard <span>needs attention first</span></h4><div id="exLeads"></div></div>
-    <div class="ex-card"><h4>📈 Compliance Trend <span>% of surveyed ≥ 4″ WC</span></h4><div class="chart-box"><canvas id="chComp"></canvas></div></div>
+    <div class="ex-card"><h4>📈 Compliance Trend <span>% of surveyed within 6–30″ WC</span></h4><div class="chart-box"><canvas id="chComp"></canvas></div></div>
   </section>
 
   <div class="kpis">
     <div class="kpi k-blue"><div class="lbl">Total TBS Stations</div><div class="val num" id="kTotal">0</div><div class="sub">Stations in current view</div></div>
-    <div class="kpi k-red"><div class="lbl">⚠ Balancing Required</div><div class="val num" id="kReq">0</div><div class="sub">Tail-end pressure &lt; 4″ WC</div></div>
-    <div class="kpi k-green"><div class="lbl">✓ Balancing Not Required</div><div class="val num" id="kOk">0</div><div class="sub">Tail-end pressure ≥ 4″ WC</div></div>
+    <div class="kpi k-red"><div class="lbl">⚠ Low Pressure</div><div class="val num" id="kReq">0</div><div class="sub">Low: tail-end &lt; 6″ WC</div></div>
+    <div class="kpi k-orange"><div class="lbl">▲ High Pressure</div><div class="val num" id="kHigh">0</div><div class="sub">High: tail-end ≥ 30″ WC · also needs balancing</div></div>
+    <div class="kpi k-green"><div class="lbl">✓ Balancing Not Required</div><div class="val num" id="kOk">0</div><div class="sub">Tail-end 6″ to below 30″ WC</div></div>
     <div class="kpi k-amber"><div class="lbl">No Reading</div><div class="val num" id="kNo">0</div><div class="sub">Missing tail-end data</div></div>
     <div class="kpi k-purple"><div class="lbl">Avg Tail-End</div><div class="val num" id="kAvg">—</div><div class="sub">inches of water column</div></div>
     <div class="kpi k-blue"><div class="lbl">Team Leads</div><div class="val num" id="kLeads">0</div><div class="sub">Active in field</div></div>
@@ -206,7 +211,9 @@ footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px}
     <div class="fgroup"><label>Status</label>
       <select id="fStatus" onchange="render()">
         <option value="">All Status</option>
-        <option value="req">⚠ Balancing Required</option>
+        <option value="bal">🛠 All Balancing Required (low + high)</option>
+        <option value="req">⚠ Low Pressure (&lt; 6″)</option>
+        <option value="high">▲ High Pressure (≥ 30″)</option>
         <option value="ok">✓ Not Required</option>
         <option value="nodata">No Reading</option>
       </select></div>
@@ -311,8 +318,10 @@ const EMBED = {"records": [{"tbs": "01-TBS Mishal Textile Ata Buksh Road", "lead
 let records = EMBED.records.slice();
 let sortKey='tail', sortDir=1;
 let charts={};
-const stOf = r => r.tail==null?'nodata':(r.tail<4?'req':'ok');
-const stLbl = {req:'⚠ BALANCING REQUIRED', ok:'✓ NOT REQUIRED', nodata:'NO READING'};
+const LOW=6, HIGH=30;   /* <6 = red (low), >=30 = orange (high), 6 to <30 = green */
+const stOf = r => r.tail==null?'nodata':(r.tail<LOW?'req':(r.tail>=HIGH?'high':'ok'));
+const matchSt=(r,f)=>f==='bal'?['req','high'].includes(stOf(r)):stOf(r)===f;
+const stLbl = {req:'⚠ LOW · BALANCING REQUIRED', high:'▲ HIGH · BALANCING REQUIRED', ok:'✓ NOT REQUIRED', nodata:'NO READING'};
 const dOpt={year:'numeric',month:'short',day:'numeric'};
 
 function fmtD(iso){ if(!iso) return '—'; const d=new Date(iso+'T00:00:00'); return isNaN(d)?'—':d.toLocaleDateString('en-GB',dOpt); }
@@ -344,16 +353,16 @@ function baseFiltered(){
 function render(){
   const fs=document.getElementById('fStatus').value;
   let recs=baseFiltered().map((r,i)=>({...r,_i:i}));
-  if(fs) recs=recs.filter(r=>stOf(r)===fs);
+  if(fs) recs=recs.filter(r=>matchSt(r,fs));
   /* dates for "as on" */
   const ds=records.map(r=>r.date).filter(Boolean).sort();
   document.getElementById('asOn').textContent = ds.length? fmtD(ds[ds.length-1]) : '—';
   const to=document.getElementById('fTo').value;
   if(to) document.getElementById('asOn').textContent = fmtD(to);
   /* KPIs */
-  const c={req:0,ok:0,nodata:0}; let sum=0,n=0;
+  const c={req:0,high:0,ok:0,nodata:0}; let sum=0,n=0;
   recs.forEach(r=>{const s=stOf(r); c[s]++; if(r.tail!=null){sum+=r.tail;n++;}});
-  anim('kTotal',recs.length); anim('kReq',c.req); anim('kOk',c.ok); anim('kNo',c.nodata);
+  anim('kTotal',recs.length); anim('kReq',c.req); anim('kHigh',c.high); anim('kOk',c.ok); anim('kNo',c.nodata);
   document.getElementById('kAvg').textContent = n?(sum/n).toFixed(1):'—';
   document.getElementById('kLeads').textContent = new Set(recs.map(r=>r.lead)).size;
   document.getElementById('tblCount').textContent = recs.length+' stations shown';
@@ -373,7 +382,7 @@ function render(){
       <td class="num">${r.outlet??'—'}</td>
       <td class="num">${drop}</td>
       <td>${fmtD(r.date)}</td>
-      <td class="num ${s==='req'?'tail-bad':s==='ok'?'tail-good':''}">${r.tail??'—'}</td>
+      <td class="num ${s==='req'?'tail-bad':s==='high'?'tail-high':s==='ok'?'tail-good':''}">${r.tail??'—'}</td>
       <td><span class="pill pill-${s}">${stLbl[s]}</span></td></tr>`;
   }).join('') || `<tr><td colspan="8" style="text-align:center;padding:30px;color:var(--muted)">No records match the filters</td></tr>`;
   renderCharts(recs); try{execPanel();}catch(e){console.warn(e);} labelRows();
@@ -388,22 +397,23 @@ function resetFilters(){['fFrom','fTo','fSearch'].forEach(i=>document.getElement
 function mkChart(id,cfg){ if(charts[id])charts[id].destroy(); charts[id]=new Chart(document.getElementById(id),cfg); }
 function renderCharts(recs){
   Chart.defaults.color='#8fa0c0'; Chart.defaults.font.family='Segoe UI,system-ui,sans-serif';
-  const c={req:0,ok:0,nodata:0}; recs.forEach(r=>c[stOf(r)]++);
-  mkChart('chDonut',{type:'doughnut',data:{labels:['Balancing Required','Not Required','No Reading'],
-    datasets:[{data:[c.req,c.ok,c.nodata],backgroundColor:['#ef4444','#22c55e','#f59e0b'],borderColor:'#111a30',borderWidth:3,hoverOffset:8}]},
+  const c={req:0,high:0,ok:0,nodata:0}; recs.forEach(r=>c[stOf(r)]++);
+  mkChart('chDonut',{type:'doughnut',data:{labels:['Low (<6″)','High (≥30″)','Not Required','No Reading'],
+    datasets:[{data:[c.req,c.high,c.ok,c.nodata],backgroundColor:['#ef4444','#f97316','#22c55e','#64748b'],borderColor:'#111a30',borderWidth:3,hoverOffset:8}]},
     options:{cutout:'68%',plugins:{legend:{position:'bottom',labels:{padding:16,usePointStyle:true}},tooltip:{callbacks:{label:x=>` ${x.label}: ${x.raw} TBS (${(x.raw/(recs.length||1)*100).toFixed(1)}%)`}}}}});
   /* by team lead */
-  const byL={}; recs.forEach(r=>{byL[r.lead]=byL[r.lead]||{req:0,ok:0}; byL[r.lead][stOf(r)==='req'?'req':'ok']++;});
-  const L=Object.entries(byL).sort((a,b)=>(b[1].req+b[1].ok)-(a[1].req+a[1].ok)).slice(0,10);
+  const byL={}; recs.forEach(r=>{byL[r.lead]=byL[r.lead]||{req:0,high:0,ok:0}; const q=stOf(r); if(q in byL[r.lead]) byL[r.lead][q]++;});
+  const L=Object.entries(byL).sort((a,b)=>(b[1].req+b[1].high+b[1].ok)-(a[1].req+a[1].high+a[1].ok)).slice(0,10);
   mkChart('chLead',{type:'bar',data:{labels:L.map(x=>x[0].replace('Mr. ','')),
-    datasets:[{label:'Required',data:L.map(x=>x[1].req),backgroundColor:'#ef4444',borderRadius:4,stack:'s'},
+    datasets:[{label:'Low (<6″)',data:L.map(x=>x[1].req),backgroundColor:'#ef4444',borderRadius:4,stack:'s'},
+              {label:'High (≥30″)',data:L.map(x=>x[1].high),backgroundColor:'#f97316',borderRadius:4,stack:'s'},
               {label:'Not Required',data:L.map(x=>x[1].ok),backgroundColor:'#22c55e',borderRadius:4,stack:'s'}]},
     options:{indexAxis:'y',plugins:{legend:{position:'bottom',labels:{usePointStyle:true}}},scales:{x:{stacked:true,grid:{color:'rgba(30,42,71,.5)'}},y:{stacked:true,grid:{display:false}}}}});
   /* histogram of tail-end */
-  const tails=recs.map(r=>r.tail).filter(v=>v!=null&&v<40);
-  const bins=[0,1,2,3,4,5,6,8,10,15,20,40]; const cnt=new Array(bins.length-1).fill(0);
+  const tails=recs.map(r=>r.tail).filter(v=>v!=null&&v<100);
+  const bins=[0,1,2,3,4,5,6,8,10,15,20,30,40,60,100]; const cnt=new Array(bins.length-1).fill(0);
   tails.forEach(v=>{for(let i=0;i<bins.length-1;i++) if(v>=bins[i]&&v<bins[i+1]){cnt[i]++;break;}});
-  const bg=cnt.map((_,i)=> (bins[i]<4&&bins[i+1]<=4)?'#ef4444':'#3b82f6');
+  const bg=cnt.map((_,i)=> (bins[i+1]<=LOW)?'#ef4444':(bins[i]>=HIGH)?'#f97316':'#3b82f6');
   mkChart('chHist',{type:'bar',data:{labels:cnt.map((_,i)=>`${bins[i]}–${bins[i+1]}`),
     datasets:[{data:cnt,backgroundColor:bg,borderRadius:5}]},
     options:{plugins:{legend:{display:false},tooltip:{callbacks:{title:i=>`Tail-end ${i[0].label} ″ WC`}}},
@@ -528,7 +538,7 @@ async function syncCloud(){
 /* ================= EXPORT ================= */
 function exportCSV(){
   const fs=document.getElementById('fStatus').value;
-  let recs=baseFiltered(); if(fs) recs=recs.filter(r=>stOf(r)===fs);
+  let recs=baseFiltered(); if(fs) recs=recs.filter(r=>matchSt(r,fs));
   const head=['TBS_Name','Team_Lead','Inlet_Pressure_PSIG','Outlet_Pressure_PSIG','Pressure_Drop','Identification_Date','Tail_End_Pressure_inWC','Status'];
   const rows=recs.map(r=>[r.tbs,r.lead,r.inlet??'',r.outlet??'',(r.inlet!=null&&r.outlet!=null)?(r.inlet-r.outlet):'',r.date??'',r.tail??'',stLbl[stOf(r)]]);
   const ws=XLSX.utils.aoa_to_sheet([head,...rows]);
@@ -539,28 +549,28 @@ function exportCSV(){
 /* ================= EXECUTIVE PANEL ================= */
 const isoD=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 function snapAt(d){const m={};records.forEach(r=>{if(r.date&&r.date>d)return;const k=r.tbs,o=m[k];if(!o||(r.date||'')>(o.date||'')||((r.date||'')===(o.date||'')&&r._u>o._u))m[k]=r;});return Object.values(m);}
-function tally(a){let q=0,k=0,n=0;a.forEach(r=>{const s=stOf(r);s==='req'?q++:s==='ok'?k++:n++;});const t=q+k;return{req:q,ok:k,nodata:n,tot:a.length,pct:t?k/t*100:null};}
+function tally(a){let q=0,h=0,k=0,n=0;a.forEach(r=>{const s=stOf(r);s==='req'?q++:s==='high'?h++:s==='ok'?k++:n++;});const t=q+h+k;return{req:q,high:h,ok:k,nodata:n,tot:a.length,pct:t?k/t*100:null};}
 const tone=p=>p>=95?'#22c55e':p>=85?'#f59e0b':'#ef4444';
 function execPanel(){
   const ds=[...new Set(records.map(r=>r.date).filter(Boolean))].sort(); if(!ds.length) return;
   const Ld=ds[ds.length-1], cur=snapAt(Ld), T=tally(cur), p=T.pct==null?0:T.pct;
   const arc=document.getElementById('rgArc'); arc.style.stroke=tone(p); arc.setAttribute('stroke-dasharray',(p/100*326.7).toFixed(1)+' 327');
   document.getElementById('rgPct').textContent=T.pct==null?'—':p.toFixed(1)+'%';
-  const by={}; cur.forEach(r=>{const o=by[r.lead]=by[r.lead]||{ok:0,req:0};const s=stOf(r);if(s==='req')o.req++;else if(s==='ok')o.ok++;});
+  const by={}; cur.forEach(r=>{const o=by[r.lead]=by[r.lead]||{ok:0,req:0};const s=stOf(r);if(s==='req'||s==='high')o.req++;else if(s==='ok')o.ok++;});
   const leads=Object.entries(by).map(([n,o])=>({n,...o,pct:(o.ok+o.req)?o.ok/(o.ok+o.req)*100:100})).sort((a,b)=>a.pct-b.pct||b.req-a.req);
   const worst=leads.find(l=>l.req>0);
-  document.getElementById('exLine').innerHTML=T.req===0?'<b>All surveyed stations</b> meet the ≥ 4″ WC tail-end standard ✔'
-    :`<b>${T.req}</b> of ${T.ok+T.req} surveyed stations (${(100-p).toFixed(1)}%) need pressure balancing`+(worst?`, most under <b>${esc(worst.n)}</b> (${worst.req})`:'')+'.';
+  document.getElementById('exLine').innerHTML=(T.req+T.high)===0?'<b>All surveyed stations</b> are within the 6–30″ WC tail-end range ✔'
+    :`<b>${T.req+T.high}</b> of ${T.ok+T.req+T.high} surveyed stations (${(100-p).toFixed(1)}%) need balancing — <b style="color:#f87171">${T.req} low</b> (&lt;6″) and <b style="color:#fb923c">${T.high} high</b> (≥30″)`+(worst?`, most under <b>${esc(worst.n)}</b> (${worst.req})`:'')+'.';
   const pd=new Date(Ld+'T00:00:00'); pd.setDate(pd.getDate()-7); const PT=tally(snapAt(isoD(pd)));
   let chips=`<span class="chip">📅 As on <b>${fmtD(Ld)}</b></span><span class="chip">🏭 <b>${T.tot}</b> stations</span><span class="chip">⚠ <b>${T.nodata}</b> no reading</span>`;
-  if(PT.tot>=T.tot*0.8){const d=T.req-PT.req;chips+=`<span class="chip ${d>0?'up':d<0?'dn':''}">${d>0?'▲':d<0?'▼':'●'} <b>${Math.abs(d)}</b> ${d>0?'more':d<0?'fewer':'no change in'} required vs 7 days ago</span>`;}
+  if(PT.tot>=T.tot*0.8){const d=(T.req+T.high)-(PT.req+PT.high);chips+=`<span class="chip ${d>0?'up':d<0?'dn':''}">${d>0?'▲':d<0?'▼':'●'} <b>${Math.abs(d)}</b> ${d>0?'more':d<0?'fewer':'no change in'} required vs 7 days ago</span>`;}
   document.getElementById('exChips').innerHTML=chips;
-  const wl=cur.filter(r=>stOf(r)==='req').sort((a,b)=>a.tail-b.tail).slice(0,6);
-  document.getElementById('exWatch').innerHTML=wl.length?wl.map(r=>`<div class="wl" data-q="${esc(r.tbs)}" style="cursor:pointer"><span title="${esc(r.tbs)}">${esc(r.tbs)}<small>${esc(r.lead)} · ${fmtD(r.date)}</small></span><b>${r.tail}″</b></div>`).join(''):'<div class="wl good">✓ No critical stations</div>';
+  const dev=r=>stOf(r)==='req'?LOW-r.tail:r.tail-HIGH, wl=cur.filter(r=>['req','high'].includes(stOf(r))).sort((a,b)=>dev(b)-dev(a)).slice(0,6);
+  document.getElementById('exWatch').innerHTML=wl.length?wl.map(r=>`<div class="wl ${stOf(r)==='high'?'hi':''}" data-q="${esc(r.tbs)}" style="cursor:pointer"><span title="${esc(r.tbs)}">${esc(r.tbs)}<small>${esc(r.lead)} · ${fmtD(r.date)}</small></span><b>${r.tail}″</b></div>`).join(''):'<div class="wl good">✓ No critical stations</div>';
   document.getElementById('exLeads').innerHTML=leads.map(l=>`<div class="ld" data-lead="${esc(l.n)}" style="cursor:pointer"><div><span>${esc(l.n)}</span><i>${l.ok}/${l.ok+l.req} OK · <b style="color:${tone(l.pct)}">${l.pct.toFixed(0)}%</b></i></div><div class="bar"><u style="width:${l.pct}%;background:${tone(l.pct)}"></u></div></div>`).join('');
   const H=ds.slice(-30).map(d=>({d,t:tally(snapAt(d))})), v=H.map(h=>h.t.pct==null?null:+h.t.pct.toFixed(1));
   mkChart('chComp',{type:'line',data:{labels:H.map(h=>fmtD(h.d).replace(/ 20\d\d$/,'')),datasets:[{data:v,borderColor:'#22c55e',backgroundColor:'rgba(34,197,94,.15)',fill:true,tension:.35,pointRadius:3,spanGaps:true}]},
-    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:x=>` ${x.raw}% compliant`,afterLabel:x=>`${H[x.dataIndex].t.req} need balancing of ${H[x.dataIndex].t.ok+H[x.dataIndex].t.req}`}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:6}},y:{max:100,min:Math.max(0,Math.floor(Math.min(...v.filter(x=>x!=null))-5)),grid:{color:'rgba(30,42,71,.5)'},ticks:{callback:x=>x+'%'}}}}});
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:x=>` ${x.raw}% compliant`,afterLabel:x=>`${H[x.dataIndex].t.req+H[x.dataIndex].t.high} need balancing of ${H[x.dataIndex].t.ok+H[x.dataIndex].t.req+H[x.dataIndex].t.high}`}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:6}},y:{max:100,min:Math.max(0,Math.floor(Math.min(...v.filter(x=>x!=null))-5)),grid:{color:'rgba(30,42,71,.5)'},ticks:{callback:x=>x+'%'}}}}});
 }
 function labelRows(){const L=['Station','Team Lead','Inlet PSIG','Outlet PSIG','Δ Drop','Date','Tail-End ″WC','Status'];document.querySelectorAll('#tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.dataset.l=L[i]||''));wireClicks();}
 function toggleFs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();}
@@ -574,9 +584,9 @@ function drill(o){const g=id=>document.getElementById(id);
   g('fMode').value='snapshot'; render();
   document.querySelector('.table-card').scrollIntoView({behavior:'smooth',block:'start'});}
 function wireClicks(){
-  [['kTotal',''],['kReq','req'],['kOk','ok'],['kNo','nodata']].forEach(([id,st])=>{const k=document.getElementById(id).closest('.kpi');k.style.cursor='pointer';k.title='Click to list these stations';k.onclick=()=>drill({status:st});});
-  const D=charts.chDonut; if(D){D.options.onClick=(e,a)=>{if(a.length)drill({status:['req','ok','nodata'][a[0].index]});};D.canvas.style.cursor='pointer';}
-  const B=charts.chLead; if(B){B.options.onClick=(e,a)=>{if(!a.length)return;const lb=B.data.labels[a[0].index],o=[...document.getElementById('fLead').options].find(x=>x.value.replace('Mr. ','')===lb);if(o)drill({lead:o.value,status:['req','ok'][a[0].datasetIndex]||''});};B.canvas.style.cursor='pointer';}
+  [['kTotal',''],['kReq','req'],['kHigh','high'],['kOk','ok'],['kNo','nodata']].forEach(([id,st])=>{const k=document.getElementById(id).closest('.kpi');k.style.cursor='pointer';k.title='Click to list these stations';k.onclick=()=>drill({status:st});});
+  const D=charts.chDonut; if(D){D.options.onClick=(e,a)=>{if(a.length)drill({status:['req','high','ok','nodata'][a[0].index]});};D.canvas.style.cursor='pointer';}
+  const B=charts.chLead; if(B){B.options.onClick=(e,a)=>{if(!a.length)return;const lb=B.data.labels[a[0].index],o=[...document.getElementById('fLead').options].find(x=>x.value.replace('Mr. ','')===lb);if(o)drill({lead:o.value,status:['req','high','ok'][a[0].datasetIndex]||''});};B.canvas.style.cursor='pointer';}
 }
 document.addEventListener('click',e=>{const t=e.target.closest('[data-q],[data-lead]');if(!t)return;t.dataset.q!==undefined?drill({q:t.dataset.q}):drill({lead:t.dataset.lead});});
 
